@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {background-color: rgb(243, 213, 179);
+            font-family: Arial, Helvetica, sans-serif
+            background-position: center 300px;
+    background-image: url(mangobgimage.png);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    background-attachment: fixed;}
+        h1   {color: #0b0a53;
+            text-align: center;
+	        font-family: georgia;
+	        font-weight: bold;
+	        text-transform: uppercase;
+	        margin-top: 30px; }
+        h2{text-align: center;
+            color: #151455;
+            font-family: Arial, Helvetica, sans-serif;}
+        h3{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #logo{ 
+	position:fixed; 
+	top:0; 
+	left:0; 
+}
+        footer{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        p    {color: rgba(0, 0, 0, 0.973);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .navbar {
+                overflow: hidden;
+                background-color: #333;
+                margin: 0;
+              padding: 0;
+              list-style-type: none;
+              display: flex;
+              justify-content: center;
+            }
+
+
+        .navbar a {
+  display: block;
+border: 1px solid;
+border-radius: .5em;
+padding: .5em 1em;
+margin: .5em;
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+        .dropdown {
+            float: left;
+            overflow: hidden;   
+        }       
+
+        .dropdown .dropbtn {
+    font-size: 16px;  
+    outline: none;
+    color: rgb(252, 252, 252);
+    background-color: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+border: 1px solid;
+border-radius: .5em;
+padding: .5em 1em;
+margin: .5em;
+justify-content: center;
+}
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: rgb(223, 99, 16);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(223, 99, 16);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--We are now starting the webisite and this is how we program for the logo and the name to be on the top-->
+    
+</head>
+
+<body>
+    
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="blog.html">Blog</a>   
+        <div class="dropdown">
+          <button class="dropbtn">Restaurant 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="hours.html">Hours</a>
+            <a href="menu.html">Menu</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="orders.html">Order here!</a>
+          </div>
+        </div> 
+        <a href="contact.html">Contact US!</a> 
+      </div>
+  
+      <h2>Our Contact Information</h2>
+      <p><b>Phone: </b> (738)567-8901</p>
+      <p><b>Email: </b>mangovia@hotmail.com</p>
+      <P><b>Location and Hours</b></p>
+      <p>12345 Greatest Road
+    <br>Dallas, Texas 89033
+      <br>Monday through Friday 11am to 11pm
+      <br> Saturday and Sunday 11am to 2am</p>
+<fieldset><!--This helps to seperate different portions of the form-->
+<legend> <h3> Contact Us!</h3></legend>
+<p><label for="form-name">Name:</label> <input type="text" name="fullname" id="form-name"></p>
+<p><label for="form-telephone">Telephone:</label> <input type="text" name="telephone" id="form-telephone"></p>
+<p><label for="form-email">Email:</label> <input type="text" name="email" id="form-email"></p>
+<p><label>Your Message:<br>
+<textarea name="instructions" rows="4" cols="60"
+maxlength="400" placeholder="No more than 400
+characters long"></textarea></label>
+<br><input type="submit" value="Submit"><input type="reset" value ="Reset">
+</fieldset></p>
+    </body>
+    <br>
+    <br>
+    <footer> <!--This is the copy right stuff for the website and also has the copy right symbol-->
+    All content copyright &copy 2021, Magovia
+    </footer>
+    </html>

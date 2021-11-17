@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {background-color: rgb(243, 213, 179);
+            font-family: Arial, Helvetica, sans-serif
+            background-position: center 300px;
+    background-image: url(mangobgimage.png);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    background-attachment: fixed;}
+        h1   {color: #0b0a53;
+            text-align: center;
+	        font-family: georgia;
+	        font-weight: bold;
+	        text-transform: uppercase;
+	        margin-top: 30px; }
+        h2{text-align: left;
+            color: #151455;
+            font-family: Arial, Helvetica, sans-serif;}
+        h3{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #logo{ 
+	position:fixed; 
+	top:0; 
+	left:0; 
+}
+        footer{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;}
+
+        }
+        p    {color: rgba(0, 0, 0, 0.973);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .navbar {
+                overflow: hidden;
+                background-color: #333;
+                margin: 0;
+              padding: 0;
+              list-style-type: none;
+              display: flex;
+              justify-content: center;
+            }
+
+
+        .navbar a {
+  display: block;
+border: 1px solid;
+border-radius: .5em;
+padding: .5em 1em;
+margin: .5em;
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+        .dropdown {
+            float: left;
+            overflow: hidden;   
+        }       
+
+        .dropdown .dropbtn {
+    font-size: 16px;  
+    outline: none;
+    color: rgb(252, 252, 252);
+    background-color: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+border: 1px solid;
+border-radius: .5em;
+padding: .5em 1em;
+margin: .5em;
+justify-content: center;
+}
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: rgb(223, 99, 16);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(223, 99, 16);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--We are now starting the webisite and this is how we program for the logo and the name to be on the top-->
+ 
+    
+</head>
+
+<body>
+    <div style="background-image: url('mangobg.png');"></div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="blog.html">Blog</a>   
+        <div class="dropdown">
+          <button class="dropbtn">Restaurant 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="hours.html">Hours</a>
+            <a href="menu.html">Menu</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="orders.html">Order here!</a>
+          </div>
+        </div> 
+        <a href="contact.html">Contact US!</a> 
+      </div>
+  
+      <h2>Now you can enjoy the delicious we make in the comfort of your own home, order your next mango fix right here!</h2>
+<fieldset><!--This helps to seperate different portions of the form so its visually easier for the user to order-->
+<legend> <h3> Your information</h3></legend>
+<p><label for="form-name">Name:</label> <input type="text" name="fullname" id="form-name"></p>
+<p><label for="form-address">Address:</label> <input type="text" name="address" id="form-address"></p>
+<p><label for="form-telephone">Telephone:</label> <input type="text" name="telephone" id="form-telephone"></p>
+<p><label for="form-email">Email:</label> <input type="text" name="email" id="form-email"></p>
+<p><label>Delivery instructions:<br>
+<textarea name="instructions" rows="4" cols="60"
+maxlength="400" placeholder="No more than 400
+characters long"></textarea></label></fieldset></p>
+<!-- In that whole section we made it so that the user is able to put their perosnal info on there and for us to make swift deliveries and the code is able to recognize what is phone and what is an address etc-->
+<fieldset>
+<legend><h3>Time to tell us what you're ordeing!</h3></legend> 
+
+<!-- In this section we used a drop down menu so that the user is able to choose something from the menu-->
+<h3>Pick a dessert item!</h3><input type="text" list="menu items"
+name="menu items">
+<datalist id="menu items">
+<option value="mango lassi">
+<option value="mango mousee">
+<option value="mango pudding">
+</datalist>
+
+<!--In this section we used the radio attribute to so that user in only able to choose one of the options-->
+<h3>Pick a size!</h3>
+<p><label><input type="radio" name="size" value="size"> Extra Small</label></p>
+<p><label><input type="radio" name="size" value="size"> Small</label></p>
+<p><label><input type="radio" name="size" value="size"> Large</label></p>
+<p><label><input type="radio" name="size" value="size"> Extra Large</label></p>
+<p><label><input type="radio" name="size" value="size"> Family Size</label></p>
+<p><label><input type="radio" name="size" value="size"> 100+</label></p>
+
+<!-- In this section We used a drop down menu again to make it easy to choose the quantity for the item.-->
+<h3>Pick a quantity!</h3><input type="text" list="quantity"
+name="quantity">
+<datalist id="quantity">
+<option value="1">
+<option value="2">
+<option value="3">
+<option value="4">
+<option value="5">
+<option value="6">
+<option value="7">
+<option value="8">
+<option value="9">
+<option value="10">
+<option value="11">
+<option value="12">
+<option value="13">
+<option value="14">
+<option value="15">
+<option value="16">
+<option value="17">
+<option value="18">
+<option value="19">
+<option value="20">
+</datalist>
+
+<!-- Here we used the check box attribute so that the user can choose as many topping as they would like to-->
+<h3>Pick your extra toppings!</h3>
+<ol>
+<p><input type="checkbox" name="topping" value="topping"> None</p>
+<p><input type="checkbox" name="topping" value="topping">Strawberries</p>
+<p><input type="checkbox" name="topping" value="topping">Blueberries</p>
+<p><input type="checkbox" name="topping" value="topping">Rasberries</p>
+<p><input type="checkbox" name="topping" value="topping">Gummy Bears</p>
+<p><input type="checkbox" name="topping" value="topping">Sprinkles</p>
+</ol>
+<input type="submit" value="Bring me a delicous dessert!"><input type="reset" value ="Reset">
+</fieldset>
+    </body>
+    <footer> <!--This is the copy right stuff for the website and also has the copy right symbol-->
+    All content copyright &copy 2021, Magovia
+    </footer>
+    </html>
